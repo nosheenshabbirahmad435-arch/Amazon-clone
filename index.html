@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Clone Header</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-logo border-hover">
+          <div class="logo"></div>
+        </div>
+
+        <div class="nav-address border-hover" id="location-btn">
+          <p class="add-first">Deliver to</p>
+          <div class="add-icon">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="add-second">Pakistan</p>
+          </div>
+        </div>
+        <div class="nav-search">
+          <select class="search-select">
+            <option>All</option>
+            <option>Electronics</option>
+            <option>Books</option>
+            <option>Arts & Crafts</option>
+          </select>
+          <input placeholder="Search Amazon" class="search-input" />
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div class="nav-lang border-hover">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+            width="20px"
+          />
+          <span>EN</span>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <!-- ligin popup  on ha -->
+        <div class="nav-signin border-hover" id="signin-nav">
+          <p><span>Hello, sign in</span></p>
+          <p class="nav-second">
+            Account & Lists <i class="fa-solid fa-caret-down"></i>
+          </p>
+
+          <div class="signin-dropdown">
+            <div class="dropdown-arrow"></div>
+            <div class="signin-top">
+              <button class="signin-btn-main">Sign in</button>
+              <p>New customer? <a href="#">Start here.</a></p>
+            </div>
+            <div class="dropdown-content">
+              <div class="dropdown-list">
+                <h3>Your Lists</h3>
+                <ul>
+                  <li>Create a List</li>
+                  <li>Find a List or Registry</li>
+                </ul>
+              </div>
+              <div class="dropdown-account">
+                <h3>Your Account</h3>
+                <ul>
+                  <li>Account</li>
+                  <li>Orders</li>
+                  <li>Recommendations</li>
+                  <li>Browsing History</li>
+                  <li>Watchlist</li>
+                  <li>Video Purchases</li>
+                  <li>Kindle Unlimited</li>
+                  <li>Content & Devices</li>
+                  <li>Subscribe & Save Items</li>
+                  <li>Memberships & Subscriptions</li>
+                  <li>Music Library</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- adding anchor tag for new page order and return -->
+
+        <a href="signin.html" target="_blank">
+          <!--  <style="text-decoration: none; color:inherit;"/> -->
+
+          <div class="nav-return border-hover">
+            <p><span>Returns</span></p>
+            <p class="nav-second">& Orders</p>
+          </div>
+        </a>
+
+        <div class="nav-cart border-hover">
+          <div class="cart-icon-container">
+            <span class="cart-count">0</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <b class="cart-text">Cart</b>
+        </div>
+      </nav>
+
+      <div class="panel">
+        <div class="panel-all border-hover">
+          <i class="fa-solid fa-bars"></i> All
+        </div>
+        <!-- canged -->
+        <div class="panel-ops">
+          <a href="deals.html" class="border-hover">Today's Deals></a>
+          <a href="customer-service.html" class="border-hover"
+            >Customer Service</a
+          >
+          <a href="registry.html" class="border-hover">Registry</a>
+          <a href="gift-cards.html" class="border-hover">Gift Cards</a>
+          <a href="sell.html" class="border-hover">Sell</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero-section">
+      <div class="slider">
+        <img src="img1.jpg" class="slide active" alt="Gaming store" />
+        <img src="img2.jpg" class="slide" alt="valentines day" />
+        <img src="img3.jpg" class="slide" alt="cook well" />
+        <img src="img4.jpg" class="slide" alt="toys" />
+      </div>
+
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- card img  shop section-->
+
+    <div class="shop-section">
+      <div class="box">
+        <div class="box-content">
+          <h2>Gaming Accessories</h2>
+          <div
+            class="box-img"
+            style="background-image: url(&quot;card1.jpg&quot;)"
+          ></div>
+          <p>See more</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-content">
+          <h2>Ring Light</h2>
+          <div
+            class="box-img"
+            style="background-image: url(&quot;phoneholder.jpg&quot;)"
+          ></div>
+          <p>See more</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Refresh Space</h2>
+          <div
+            class="box-img"
+            style="background-image: url(&quot;dryer.jpg&quot;)"
+          ></div>
+          <p>See more</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Deals on Fashion</h2>
+          <div
+            class="box-img"
+            style="background-image: url(&quot;lipoil.jpg&quot;)"
+          ></div>
+          <p>See more</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-content">
+          <h2>Toys-forkids</h2>
+          <div
+            class="box-img"
+            style="background-image: url(&quot;pistole.jpg_.avif&quot;)"
+          ></div>
+          <p>See more</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Beauty Picks</h2>
+          <div
+            class="box-img"
+            style="background-image: url(&quot;makupbrush.jpg&quot;)"
+          ></div>
+          <p>See more</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Baby Care</h2>
+          <div
+            class="box-img"
+            style="background-image: url(&quot;band.jpg&quot;)"
+          ></div>
+          <p>See more</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Chrome-Book</h2>
+          <div
+            class="box-img"
+            style="background-image: url(&quot;chromebook.jpg&quot;)"
+          ></div>
+          <p>See more</p>
+        </div>
+      </div>
+      <!-- grid img -->
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Level up your beauty routine</h2>
+          <div class="quad-container">
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;makeup.jpg&quot;)"
+              ></div>
+              <span>Makeup</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;brushes.jpg&quot;)"
+              ></div>
+              <span>Brushes</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;sponges.jpg&quot;)"
+              ></div>
+              <span>Sponges</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;mirrors.jpg&quot;)"
+              ></div>
+              <span>Mirrors</span>
+            </div>
+          </div>
+          <p>See more</p>
+        </div>
+      </div>
+      <!-- grid 3 card -->
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Deals on top categories</h2>
+          <div class="quad-container">
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;Books.jpg&quot;)"
+              ></div>
+              <span>Books</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;fashion.jpg&quot;)"
+              ></div>
+              <span>Fasion</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;pc.jpg&quot;)"
+              ></div>
+              <span>Pc</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;beauty.jpg&quot;)"
+              ></div>
+              <span>Beauty</span>
+            </div>
+          </div>
+          <p>See more</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Score the top PCs & Accessories</h2>
+          <div class="quad-container">
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;desktop.jpg&quot;)"
+              ></div>
+              <span>Desktops</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;laptop.jpg&quot;)"
+              ></div>
+              <span>Laptops</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;harddrives.jpg&quot;)"
+              ></div>
+              <span>Hard Drives</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;pc accessories.jpg&quot;)"
+              ></div>
+              <span>PC Accessories</span>
+            </div>
+          </div>
+          <p>See more</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Most-loved watches</h2>
+          <div class="quad-container">
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;women.jpg&quot;)"
+              ></div>
+              <span>Women</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;men.jpg&quot;)"
+              ></div>
+              <span>Men</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;girls.jpg&quot;)"
+              ></div>
+              <span>Girls</span>
+            </div>
+            <div class="quad-item">
+              <div
+                class="quad-img"
+                style="background-image: url(&quot;boys.jpg&quot;)"
+              ></div>
+              <span>Boys</span>
+            </div>
+          </div>
+          <p>Discover more</p>
+        </div>
+      </div>
+    </div>
+    <!-- signin 3rd last -->
+    <div class="signin-section">
+      <div class="signin-content">
+        <p>See personalized recommendations</p>
+        <button>Sign in</button>
+        <span>New customer? <a href="#">Start here.</a></span>
+      </div>
+    </div>
+
+    <!-- deliver to pak popup -->
+
+    <div id="modal-overlay" class="modal-overlay"></div>
+
+    <div id="location-modal" class="location-modal">
+      <div class="modal-header">
+        <h3>Choose your location</h3>
+        <span id="close-modal">&times;</span>
+      </div>
+      <div class="modal-content">
+        <p>
+          Delivery options and delivery speeds may vary for different locations
+        </p>
+        <button class="modal-signin-btn">Sign in to see your addresses</button>
+
+        <div class="separator"><span>or enter a US zip code</span></div>
+
+        <div class="zip-input-group">
+          <input type="text" id="zip-input" />
+          <button class="apply-btn">Apply</button>
+        </div>
+
+        <div class="separator"><span>or ship outside the US</span></div>
+
+        <select class="country-select">
+          <option>Pakistan</option>
+          <option>United States</option>
+          <option>United Kingdom</option>
+        </select>
+
+        <div class="modal-footer">
+          <button id="done-btn" class="done-btn">Done</button>
+        </div>
+      </div>
+    </div>
+    <!-- logo ke nichay all ka menue -->
+
+    <div id="sidebar-container" class="sidebar">
+      <div class="sidebar-header">
+        <i class="fa-solid fa-user"></i> Hello, sign in
+        <span id="sidebar-close">&times;</span>
+      </div>
+      <div class="sidebar-content">
+        <div class="sidebar-section">
+          <h3>Trending</h3>
+          <ul>
+            <li>Best Sellers</li>
+            <li>New Releases</li>
+            <li>Movers & Shakers</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="sidebar-section">
+          <h3>Digital Content & Devices</h3>
+          <ul>
+            <li>Amazon Music</li>
+            <li>Kindle E-readers & Books</li>
+            <li>Amazon Appstore</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="sidebar-overlay" class="modal-overlay"></div>
+
+    <script src="script.js"></script>
+
+    <!-- footer 2nd last -->
+
+    <footer>
+      <div
+        class="foot-panel1"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      >
+        Back to Top
+      </div>
+
+      <div class="foot-panel2">
+        <ul>
+          <p>Get to Know Us</p>
+          <a>Careers</a>
+          <a>Blog</a>
+          <a>About Amazon</a>
+          <a>Investor Relations</a>
+          <a>Amazon Devices</a>
+          <a>Amazon Science</a>
+        </ul>
+        <ul>
+          <p>Make Money with Us</p>
+          <a>Sell products on Amazon</a>
+          <a>Sell on Amazon Business</a>
+          <a>Become an Affiliate</a>
+          <a>Advertise Your Products</a>
+          <a>Self-Publish with Us</a>
+        </ul>
+        <ul>
+          <p>Amazon Payment Products</p>
+          <a>Amazon Business Card</a>
+          <a>Shop with Points</a>
+          <a>Reload Your Balance</a>
+          <a>Amazon Currency Converter</a>
+        </ul>
+        <ul>
+          <p>Let Us Help You</p>
+          <a>Your Account</a>
+          <a>Your Orders</a>
+          <a>Shipping Rates & Policies</a>
+          <a>Returns & Replacements</a>
+          <a>Help</a>
+        </ul>
+      </div>
+
+      <div class="foot-panel3">
+        <div class="logo"></div>
+        <div class="footer-settings">
+          <div class="select-btn border-hover">
+            <i class="fa-solid fa-globe"></i>
+            <span>English</span>
+          </div>
+          <div class="select-btn border-hover">
+            <span>$ USD - U.S. Dollar</span>
+          </div>
+          <div class="select-btn border-hover">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+              width="15px"
+            />
+            <span>United States</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot-panel-services">
+        <div class="service-grid">
+          <div class="service-item">
+            <a><span>Amazon Music</span><br />Stream millions of songs</a>
+          </div>
+          <div class="service-item">
+            <a
+              ><span>Amazon Advertising</span><br />Find, attract, and engage
+              customers</a
+            >
+          </div>
+          <div class="service-item">
+            <a><span>6pm</span><br />Score deals on fashion brands</a>
+          </div>
+          <div class="service-item">
+            <a><span>AbeBooks</span><br />Books, art & collectibles</a>
+          </div>
+          <div class="service-item">
+            <a><span>ACX</span><br />Audiobook Publishing Made Easy</a>
+          </div>
+          <div class="service-item">
+            <a><span>Sell on Amazon</span><br />Start a Selling Account</a>
+          </div>
+          <div class="service-item">
+            <a
+              ><span>Amazon Business</span><br />Everything For Your Business</a
+            >
+          </div>
+          <div class="service-item">
+            <a><span>AmazonGlobal</span><br />Ship Orders Internationally</a>
+          </div>
+          <div class="service-item">
+            <a
+              ><span>Home Services</span><br />Experienced Pros Happiness
+              Guarantee</a
+            >
+          </div>
+          <div class="service-item">
+            <a
+              ><span>Amazon Web Services</span><br />Scalable Cloud Computing
+              Services</a
+            >
+          </div>
+          <div class="service-item">
+            <a
+              ><span>Audible</span><br />Listen to Books & Original Audio
+              Performances</a
+            >
+          </div>
+          <div class="service-item">
+            <a><span>Box Office Mojo</span><br />Find Movie Box Office Data</a>
+          </div>
+          <div class="service-item">
+            <a><span>Goodreads</span><br />Book reviews & recommendations</a>
+          </div>
+          <div class="service-item">
+            <a><span>IMDb</span><br />Movies, TV & Celebrities</a>
+          </div>
+          <div class="service-item">
+            <a
+              ><span>IMDbPro</span><br />Get Info Entertainment Professionals
+              Need</a
+            >
+          </div>
+          <div class="service-item">
+            <a
+              ><span>Kindle Direct Publishing</span><br />Indie Digital & Print
+              Publishing Made Easy</a
+            >
+          </div>
+          <div class="service-item">
+            <a
+              ><span>Prime Video Direct</span><br />Video Distribution Made
+              Easy</a
+            >
+          </div>
+          <div class="service-item">
+            <a><span>Shopbop</span><br />Designer Fashion Brands</a>
+          </div>
+          <div class="service-item">
+            <a><span>Woot!</span><br />Deals and Shenanigans</a>
+          </div>
+          <div class="service-item">
+            <a><span>Zappos</span><br />Shoes & Clothing</a>
+          </div>
+          <div class="service-item">
+            <a><span>Ring</span><br />Smart Home Security Systems</a>
+          </div>
+          <div class="service-item">
+            <a><span>eero WiFi</span><br />Stream 4K Video in Every Room</a>
+          </div>
+          <div class="service-item">
+            <a><span>Blink</span><br />Smart Security for Every Home</a>
+          </div>
+          <div class="service-item">
+            <a
+              ><span>Neighbors App</span><br />Real-Time Crime & Safety
+              Alerts</a
+            >
+          </div>
+          <div class="service-item">
+            <a
+              ><span>Amazon Subscription Boxes</span><br />Top subscription
+              boxes – right to your door</a
+            >
+          </div>
+          <div class="service-item">
+            <a><span>PillPack</span><br />Pharmacy Simplified</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot-panel4">
+        <div class="pages">
+          <a href="#">Conditions of Use</a>
+          <a href="#">Privacy Notice</a>
+          <a href="#">Consumer Health Data Privacy Disclosure</a>
+          <a href="#">Your Ads Privacy Choices</a>
+        </div>
+        <div class="copyright">
+          © 1996-2026, Amazon.com, Inc. or its affiliates
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

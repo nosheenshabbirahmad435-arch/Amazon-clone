@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Registry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .registry-hero {
+            background-color: #fcfcfc;
+            padding: 60px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+        }
+        .registry-text h1 { font-size: 36px; color: #111; margin-bottom: 10px; }
+        .registry-text p { font-size: 18px; color: #565959; margin-bottom: 25px; }
+        
+        .registry-btn-group { display: flex; gap: 15px; }
+        .btn-prime {
+            background-color: #FFD814;
+            border: 1px solid #FCD200;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-outline {
+            background: white;
+            border: 1px solid #D5D9D9;
+            padding: 12px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .registry-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px 10%;
+            background-color: white;
+        }
+        .reg-card { text-align: center; }
+        .reg-card img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+        .reg-card h3 { font-size: 20px; margin-bottom: 10px; }
+        
+        .search-registry {
+            background-color: #f3f3f3;
+            padding: 40px 10%;
+            text-align: center;
+        }
+        .search-registry input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #888;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo border-hover"><div class="logo"></div></div>
+            <div class="nav-search">
+                <input placeholder="Search Registry" class="search-input">
+                <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="nav-cart border-hover">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <b class="cart-text">Cart</b>
+            </div>
+        </nav>
+    </header>
+
+    <section class="registry-hero">
+        <div class="registry-text">
+            <h1>Registries & Gifting</h1>
+            <p>Whether you're celebrating a wedding, a baby, or a birthday, we're here to help.</p>
+            <div class="registry-btn-group">
+                <button class="btn-prime">Create a registry</button>
+                <button class="btn-outline">Find a registry</button>
+            </div>
+        </div>
+        <img src="https://m.media-amazon.com/images/G/01/registry/v2/heros/wedding_desktop_hero._CB424651233_.png" alt="Registry" width="400px">
+    </section>
+
+    <div class="search-registry">
+        <h2>Find a registry or gift list</h2>
+        <br>
+        <input type="text" placeholder="Registrant name">
+        <button class="btn-prime" style="padding: 10px 20px;">Search</button>
+    </div>
+
+    <section class="registry-grid">
+        <div class="reg-card">
+            <img src="baby-registry.jpg" alt="Wedding">
+            <h3>Wedding Registry</h3>
+            <p>Everything you need for your new home.</p>
+        </div>
+        <div class="reg-card">
+            <img src="wedding-registry.jpg" alt="Baby">
+            <h3>Baby Registry</h3>
+            <p>Prepare for your new arrival.</p>
+        </div>
+        <div class="reg-card">
+            <img src="gift-list.jpg" alt="Birthday">
+            <h3>Birthday Gift List</h3>
+            <p>Make birthdays extra special.</p>
+        </div>
+    </section>
+
+    <div class="foot-panel1" onclick="window.location.href='index.html'">
+        Back to Home
+    </div>
+
+</body>
+</html>

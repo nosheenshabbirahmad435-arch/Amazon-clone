@@ -1,0 +1,957 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.border-hover {
+    border: 1px solid transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.border-hover:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.navbar {
+    height: 60px;
+    background-color: #131921;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.logo {
+    background-image: url('https://pngimg.com/uploads/amazon/amazon_PNG11.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 100px;
+}
+
+/* Address */
+.nav-address .add-first { color: #ccc; font-size: 0.75rem; margin-left: 15px; }
+.nav-address .add-second { font-size: 0.9rem; font-weight: bold; }
+.add-icon { display: flex; align-items: center; }
+
+/* SEARCH BAR FIX */
+.nav-search {
+    display: flex;
+    background-color: #febd69;
+    flex: 1; /* Ye search bar ko poori jagah dega */
+    height: 40px;
+    border-radius: 4px;
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 50px;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding-left: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #0f1111;
+}
+
+/* SIGN IN FIX (Taake poora nazar aaye) */
+.nav-signin {
+    min-width: 130px;
+}
+
+.nav-signin span { font-size: 12px; }
+.nav-second { font-size: 14px; font-weight: bold; }
+
+/* CART YELLOW ZERO FIX */
+.nav-cart {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon-container {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    left: 13px;
+    color: #f08804; /* Yellow Color */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fa-cart-shopping {
+    font-size: 30px;
+}
+
+.cart-text {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+/* PANEL */
+.panel {
+    height: 40px;
+    background-color: #232f3e;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding-left: 10px;
+}
+.panel-ops p { display: inline; margin-left: 15px; font-size: 14px; }
+
+/* Slider Container */
+.hero-section {
+    position: relative;
+    height: 500px; /* Aap apni marzi se height set kar sakte hain */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Images Styling */
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Is se image stretch nahi hogi */
+    display: none; /* Pehle sab hide hongi */
+}
+
+/* Sirf Active Image dikhegi */
+.slider img.active {
+    display: block;
+}
+
+/* Left aur Right Brackets (Buttons) */
+.prev, .next {
+    position: absolute;
+    top: 30%; /* Image ke beech mein lane ke liye */
+    background-color: transparent;
+    color: black;
+    font-size: 50px;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 10;
+}
+
+.next {
+    right: 0; /* Right side par chipkane ke liye */
+}
+
+.prev:hover, .next:hover {
+    border: 2px solid #007185; /* Amazon style focus */
+}
+
+/* deliver to pak popup */
+/* Overlay: Screen ko black/transparent karne ke liye */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+/* Modal Box */
+.location-modal {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 375px;
+    background: white;
+    border-radius: 8px;
+    z-index: 1001;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-size: 13px;
+}
+
+.modal-header {
+    background: #f0f2f2;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d5d9d9;
+}
+
+.modal-content { padding: 20px; }
+
+.modal-signin-btn {
+    width: 100%;
+    background: #FFD814;
+    border: 1px solid #FCD200;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.separator {
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+    line-height: 0.1em;
+    margin: 20px 0;
+}
+
+.separator span { background:#fff; padding:0 10px; color: #565959; }
+
+.zip-input-group { display: flex; gap: 10px; margin-bottom: 15px; }
+
+#zip-input { flex: 1; padding: 5px; border: 1px solid #888c8c; border-radius: 3px; }
+
+.apply-btn { padding: 5px 15px; border-radius: 8px; border: 1px solid #d5d9d9; background: white; }
+
+.country-select { width: 100%; padding: 8px; background: #f0f2f2; border: 1px solid #d5d9d9; border-radius: 8px; }
+
+.modal-footer { text-align: right; margin-top: 20px; }
+
+.done-btn { background: #FFD814; border: 1px solid #FCD200; padding: 7px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+
+#close-modal { cursor: pointer; font-size: 20px; font-weight: bold; }
+
+
+/* login popup */
+/* Sign-in Dropdown Positioning */
+.nav-signin {
+    position: relative; /* Takay popup iske mutabiq align ho */
+}
+
+.signin-dropdown {
+    display: none; /* Shuru mein hide */
+    position: absolute;
+    top: 45px;
+    right: -50px;
+    width: 450px;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    padding: 20px;
+    z-index: 2000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Arrow on top */
+.dropdown-arrow {
+    position: absolute;
+    top: -10px;
+    right: 80px;
+    width: 0; height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+/* Hover Effect */
+.nav-signin:hover .signin-dropdown {
+    display: block;
+}
+
+/* Content Styling */
+.signin-top {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.signin-btn-main {
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    border: 1px solid #a88734;
+    width: 200px;
+    padding: 7px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-list, .dropdown-account {
+    width: 48%;
+}
+
+.dropdown-list {
+    border-right: 1px solid #eee;
+}
+
+.dropdown-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.dropdown-content ul {
+    list-style: none;
+}
+
+.dropdown-content ul li {
+    font-size: 13px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.dropdown-content ul li:hover {
+    color: #ff9900;
+    text-decoration: underline;
+}
+/* link blue */
+a {
+    text-decoration: none;
+    color: inherit; /* Taake header ka text white hi rahe */
+}
+
+/* all menue option logo left  */
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -365px; /* Shuru mein screen se bahar */
+    width: 365px;
+    height: 100%;
+    background-color: white;
+    z-index: 2001;
+    transition: left 0.3s ease; /* Slide effect ke liye */
+    overflow-y: auto;
+}
+
+/* Jab sidebar khulega tab ye class add hogi */
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-header {
+    background-color: #232f3e;
+    color: white;
+    padding: 15px 30px;
+    font-size: 19px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#sidebar-close {
+    position: absolute;
+    left: 375px; /* Sidebar ke bahar cross show hoga */
+    top: 15px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar-content {
+    padding: 20px 0;
+}
+
+.sidebar-section h3 {
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #111;
+}
+
+.sidebar-section ul {
+    list-style: none;
+}
+
+.sidebar-section ul li {
+    padding: 12px 30px;
+    font-size: 14px;
+    color: #444;
+    cursor: pointer;
+}
+
+.sidebar-section ul li:hover {
+    background-color: #eaeded;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+/* card img  */
+/* Cards Container */
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #e2e7e6;
+    padding: 20px 20px;
+    /* Slider ke upar thoda sa charhane ke liye margin-top negative karein */
+    margin-top: -150px; 
+    position: relative;
+    z-index: 5;
+}
+
+/* Individual Card Box */
+.box {
+    height: 420px;
+    width: 24%; /* Takay 4 boxes ek line mein aayein */
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.box-content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.box-content h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.box-img {
+    height: 300px;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: #f3f3f3; */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.box-content p {
+    color: #007185;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.box-content p:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+/* grid img 1 */
+/* Multi-image grid inside a box */
+.quad-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.quad-item {
+    width: 45%; /* Ek line mein 2 images lane ke liye */
+    cursor: pointer;
+}
+
+.quad-img {
+    height: 100px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #f3f3f3;
+}
+
+.quad-item span {
+    font-size: 12px;
+    color: #0f1111;
+    display: block;
+    margin-top: 5px;
+}
+/* 3rd last */
+.signin-section {
+    background-color: white;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ddd; /* Upar wali patli line */
+    border-bottom: 1px solid #ddd; /* Niche wali patli line */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.signin-content {
+    text-align: center;
+    font-size: 13px;
+}
+
+.signin-content p {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.signin-content button {
+    background-color: #ffc107; /* Amazon yellow button color */
+    border: 1px solid #a88734;
+    border-radius: 5px;
+    width: 250px;
+    height: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+/* Button par hover effect */
+.signin-content button:hover {
+    background-color: #f7b600;
+}
+
+.signin-content span {
+    display: block;
+    font-size: 11px;
+}
+
+.signin-content a {
+    text-decoration: none;
+    color: #007185; /* Link blue color */
+}
+
+.signin-content a:hover {
+    color: #c7511f; /* Link hover color */
+    text-decoration: underline;
+}
+/* 2nd last  */
+footer {
+    margin-top: 15px;
+}
+
+/* Back to Top Styling */
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.foot-panel1:hover {
+    background-color: #485769; /* Hover effect */
+}
+
+/* Footer Links Styling */
+.foot-panel2 {
+    background-color: #232f3e;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.foot-panel2 ul p {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.foot-panel2 ul a {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #DDDDDD;
+    cursor: pointer;
+}
+
+.foot-panel2 ul a:hover {
+    text-decoration: underline;
+}
+/* last part */
+/* Panel 3: Logo and Settings */
+.foot-panel3 {
+    background-color: #232f3e;
+    color: white;
+    border-top: 1px solid #485769; /* Patli line separation ke liye */
+    padding: 30px 0;
+
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.footer-settings {
+    display: flex;
+    gap: 10px;
+}
+
+.select-lang, .select-country {
+    border: 1px solid #848688;
+    padding: 6px 15px;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* Panel 4: Copyright Info */
+.foot-panel4 {
+    background-color: #131a22; /* Thoda aur dark */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.pages {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.pages a {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.pages a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 12px;
+}
+/* Services Grid Styling */
+.foot-panel-services {
+    background-color: #131a22; /* Footer bottom dark color */
+    padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #3a4553;
+}
+
+.service-grid {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Services Grid Styling */
+.foot-panel-services {
+    background-color: #131a22;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #3a4553;
+}
+
+.service-grid {
+    width: 80%;
+    display: grid;
+    /* Is se 7 columns banenge jo Amazon ki tarah dikhen ge */
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 20px 10px; /* Vertical aur Horizontal gap */
+}
+
+.service-item a {
+    color: #999; /* Text thoda gray hota hai original mein */
+    font-size: 11px;
+    line-height: 1.2;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.service-item a span {
+    font-weight: bold;
+    color: white; /* Title white hota hai */
+    font-size: 12px;
+}
+
+.service-item a:hover {
+    text-decoration: underline;
+}
+
+/* Choti screen (Mobile) ke liye grid adjust karein */
+@media (max-width: 1000px) {
+    .service-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+.service-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-col a {
+    color: #DDD;
+    font-size: 10px; /* Chota font size jaisa amazon par hota hai */
+    line-height: 1.2;
+    cursor: pointer;
+    width: 120px;
+}
+
+.service-col a span {
+    font-weight: bold;
+    color: white;
+    font-size: 11px;
+}
+
+.service-col a:hover {
+    text-decoration: underline;
+}
+
+/* Panel 3 Buttons Update */
+.select-btn {
+    border: 1px solid #848688;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ccc;
+    background: transparent;
+}
+
+.select-btn:hover {
+    border-color: white;
+}
+/* changed */
+/* Deals Page Styling */
+.deals-container {
+    background-color: white;
+    padding: 20px 40px;
+    min-height: 80vh;
+}
+
+.deals-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.deal-card {
+    border: 1px solid #ddd; /* Picture mein card ka border hota hai */
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+.deal-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.deal-img {
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+}
+
+.deal-info {
+    padding: 0 10px;
+}
+
+.discount-badge {
+    background-color: #CC0C39;
+    color: white;
+    padding: 4px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.deal-type {
+    color: #CC0C39;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.deal-name {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #0F1111;
+}
+/* Deals Page Specific Layout */
+.deals-layout {
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Sidebar Styling */
+.filters-sidebar {
+    width: 260px;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0; /* Sidebar ko dabne se rokta hai */
+}
+
+.filters-sidebar h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.filters-sidebar ul {
+    list-style: none;
+    font-size: 13px;
+}
+
+.filters-sidebar ul li {
+    margin-bottom: 8px;
+    color: #007185;
+    cursor: pointer;
+}
+
+.filters-sidebar ul li:hover {
+    color: #c45500;
+}
+
+/* Content Area */
+.deals-content {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.deals-content h1 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Deals Grid Adjustment */
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.deal-card {
+    border: 1px solid #eee;
+    padding-bottom: 10px;
+    transition: 0.3s;
+}
+
+.deal-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* customer service file css */
+/* --- CUSTOMER SERVICE PAGE CSS --- */
+
+.cs-wrapper {
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+/* Teal Header */
+.cs-header {
+    background-color: #007185; /* Amazon teal color */
+    color: white;
+    padding: 40px 10%;
+}
+
+.cs-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Grid Layout */
+.cs-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.cs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px;
+}
+
+/* Individual Card */
+.cs-card {
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cs-card:hover {
+    background-color: #f7f7f7;
+    border-color: #007185;
+}
+
+.cs-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cs-icon i {
+    font-size: 35px;
+    color: #565959;
+}
+
+.cs-info h3 {
+    font-size: 14px;
+    color: #111;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.cs-info p {
+    font-size: 12px;
+    color: #565959;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 850px) {
+    .cs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .cs-grid {
+        grid-template-columns: 1fr;
+    }
+}

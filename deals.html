@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Deals - Amazon Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo border-hover">
+                <a href="index.html"><div class="logo"></div></a>
+            </div>
+            <div class="nav-address border-hover" id="location-btn">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-second">Pakistan</p>
+                </div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select"><option>All</option></select>
+                <input placeholder="Search Amazon" class="search-input">
+                <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="nav-signin border-hover">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+            <div class="nav-cart border-hover">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <b class="cart-text">Cart</b>
+            </div>
+        </nav>
+        <div class="panel">
+            <div class="panel-all border-hover"><i class="fa-solid fa-bars"></i> All</div>
+            <div class="panel-ops">
+                <a href="deals.html" class="border-hover">Today's Deals</a>
+                <p class="border-hover">Customer Service</p>
+                <p class="border-hover">Registry</p>
+                <p class="border-hover">Gift Cards</p>
+                <p class="border-hover">Sell</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="deals-layout">
+        <aside class="filters-sidebar">
+            <h3>Department</h3>
+            <ul>
+                <li><input type="checkbox"> Electronics</li>
+                <li><input type="checkbox"> Home & Kitchen</li>
+                <li><input type="checkbox"> Fashion</li>
+                <li><input type="checkbox"> Beauty</li>
+            </ul>
+
+            <h3>Price</h3>
+            <ul>
+                <li><a href="#">Under $25</a></li>
+                <li><a href="#">$25 to $50</a></li>
+                <li><a href="#">$50 to $100</a></li>
+            </ul>
+
+            <h3>Discount</h3>
+            <ul>
+                <li><a href="#">10% Off or More</a></li>
+                <li><a href="#">25% Off or More</a></li>
+                <li><a href="#">50% Off or More</a></li>
+            </ul>
+        </aside>
+
+        <section class="deals-content">
+            <h1>Today's Deals</h1>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <div class="deal-img" style="background-image: url('turbotax.jpg');"></div>
+                    <div class="deal-info">
+                        <span class="discount-badge">Up to 44% off</span> <span class="deal-type">limited time deal</span>
+                        <p class="deal-name">Turbotax deluxe Desktop
+                             Edition 2025</p>
+                    </div>
+                </div>
+
+                <div class="deal-card">
+                    <div class="deal-img" style="background-image: url('shark.jpg');"></div>
+                    <div class="deal-info">
+                        <span class="discount-badge">25% off</span> <span class="deal-type">Limited time deal</span>
+                        <p class="deal-name">Shark|upright Vaccume cleaner</p>
+                    </div>
+                </div>
+
+                <div class="deal-card">
+                    <div class="deal-img" style="background-image: url('bedsheet.jpg');"></div>
+                    <div class="deal-info">
+                        <span class="discount-badge">Up to 34% off</span> <span class="deal-type">Limited time deal</span>
+                        <p class="deal-name">Queen size 4 piece sheet sets</p>
+                    </div>
+                </div>
+                 <div class="deal-card">
+                    <div class="deal-img" style="background-image: url('levoit.jpg');"></div>
+                    <div class="deal-info">
+                        <span class="discount-badge">35% off</span> <span class="deal-type">Limited time deal</span>
+                        <p class="deal-name">Levoit air purifier for home</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+     <footer>
+    <div class="foot-panel1" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        Back to Top
+    </div>
+
+    <div class="foot-panel2">
+        <ul>
+            <p>Get to Know Us</p>
+            <a>Careers</a>
+            <a>Blog</a>
+            <a>About Amazon</a>
+            <a>Investor Relations</a>
+            <a>Amazon Devices</a>
+            <a>Amazon Science</a>
+        </ul>
+        <ul>
+            <p>Make Money with Us</p>
+            <a>Sell products on Amazon</a>
+            <a>Sell on Amazon Business</a>
+            <a>Become an Affiliate</a>
+            <a>Advertise Your Products</a>
+            <a>Self-Publish with Us</a>
+        </ul>
+        <ul>
+            <p>Amazon Payment Products</p>
+            <a>Amazon Business Card</a>
+            <a>Shop with Points</a>
+            <a>Reload Your Balance</a>
+            <a>Amazon Currency Converter</a>
+        </ul>
+        <ul>
+            <p>Let Us Help You</p>
+            <a>Your Account</a>
+            <a>Your Orders</a>
+            <a>Shipping Rates & Policies</a>
+            <a>Returns & Replacements</a>
+            <a>Help</a>
+        </ul>
+    </div>
+
+    <div class="foot-panel3">
+        <div class="logo"></div>
+        <div class="footer-settings">
+            <div class="select-btn border-hover">
+                <i class="fa-solid fa-globe"></i>
+                <span>English</span>
+            </div>
+            <div class="select-btn border-hover">
+                <span>$ USD - U.S. Dollar</span>
+            </div>
+            <div class="select-btn border-hover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" width="15px">
+                <span>United States</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot-panel-services">
+        <div class="service-grid">
+            <div class="service-item"><a><span>Amazon Music</span><br>Stream millions of songs</a></div>
+            <div class="service-item"><a><span>Amazon Advertising</span><br>Find, attract, and engage customers</a></div>
+            <div class="service-item"><a><span>6pm</span><br>Score deals on fashion brands</a></div>
+            <div class="service-item"><a><span>AbeBooks</span><br>Books, art & collectibles</a></div>
+            <div class="service-item"><a><span>ACX</span><br>Audiobook Publishing Made Easy</a></div>
+            <div class="service-item"><a><span>Sell on Amazon</span><br>Start a Selling Account</a></div>
+            <div class="service-item"><a><span>Amazon Business</span><br>Everything For Your Business</a></div>
+        </div>
+    </div>
+
+    <div class="foot-panel4">
+        <div class="pages">
+            <a>Conditions of Use</a>
+            <a>Privacy Notice</a>
+            <a>Your Ads Privacy Choices</a>
+        </div>
+        <div class="copyright">
+            © 1996-2024, Amazon.com, Inc. or its affiliates
+        </div>
+    </div>
+</footer>
+    
+</body>
+</html>
